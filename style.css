@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=VT323&display=swap');
+
+
+
+body{
+  font-family: 'VT323', monospace;
+}
+*{
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+}
+.calculator_js{
+
+  margin: 5% auto;
+  width: 500px;
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 20px;
+  border: 5px #414141 groove;
+}
+.calc_inputs{
+  display: flex;
+  justify-content: space-between;
+}
+.calc_input{
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: #7e7b62;
+}
+.calc_input input{
+  width: 75px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #4d9e4d;
+}
+.calc_input input:hover{
+  filter: brightness(105%);
+}
+.calc_input input:focus{
+  outline: none;
+  filter: brightness(110%);
+  text-align: center;
+}
+.calc_input input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#input1{
+  animation: display_herz 5s infinite alternate-reverse ease-in-out;
+}
+#input2{
+  animation: display_herz 6s infinite alternate-reverse ease-in-out;
+}
+.calc_res{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Inconsolata', monospace;
+}
+.calc_res input{
+  font-size: 18px;
+  text-align: center;
+  width: 125px;
+  height: 25px;
+  display: inline-block;
+  background-color: #4d9e4d;
+  color: #000;
+  border-radius: 5px;
+  margin: 10px auto;
+  animation: display_herz 4s infinite alternate-reverse ease-in-out;
+}
+.calc_buttons{
+  display: flex;
+  justify-content: space-between;
+  background-color: #7e7b62;
+  padding: 25px;
+}
+.calc_buttons button{
+  width: 75px;
+  height: 75px;
+  border-radius: 5px;
+  background-color: #616056;
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Inconsolata', monospace;
+  cursor: pointer;
+  transition: .2s;
+  animation: buttons_pulse 1s infinite alternate-reverse ease-in-out;
+}
+.calc_buttons button:hover{
+  background-color: #74705b;
+}
+.calc_buttons button:active{
+  background-color: #b9b84c;
+  box-shadow: 0 0 20px 10px #b9b74c91;
+}
+@keyframes buttons_pulse {
+  0%{
+    box-shadow: inset 0 0 20px 2px #b9b74c4f;
+  }
+  100%{
+    box-shadow: inset 0 0 20px 2px #b9b74c2f;
+  }
+}
+@keyframes display_herz {
+  0%{
+    background-color: #5d9e4d;
+    box-shadow: 0 0 20px 10px #5d9e4d41;
+  }
+  50%{
+    background-color: #63af5c;
+    box-shadow: 0 0 20px 10px #5d9e4d41;
+  }
+  52%{
+    background-color: #88c782;
+    box-shadow: 0 0 20px 10px #75b36565;
+  }
+  55%{
+    background-color: #63af5c;
+    box-shadow: 0 0 20px 10px #5d9e4d41;
+  }
+  100%{
+    background-color: #4d9e5f;
+    box-shadow: 0 0 20px 10px #5d9e4d41;
+  }
+}
